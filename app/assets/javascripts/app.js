@@ -3,3 +3,7 @@
 
   angular.module("app", []);
 }());
+
+// $scope.clearSearch = function() {
+//      $scope.searchAll = '';
+// }
