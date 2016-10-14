@@ -29,6 +29,9 @@
     // $scope.clearSearch = function(newText) {
     //  $scope.searchAll = '';
     // };
+      $scope.isPositive = function(theTodo) {
+        return theTodo.indexOf("stupid") === -1;
+      }
 
     window.scope = $scope;
   });
