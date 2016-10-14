@@ -5,15 +5,41 @@
 
     // $scope.messages = ["First Message!", "Seconds!", "Third slice of pie!"];
     $scope.todos = [
-                    "Clean the bike",
-                    "Fill up your W-9 form for Andrew Gruesser from KASS Management",
-                    "Touch base with Joel Estrada from Razorfish",
-                    "Call Melissa Lederer from MATTER Chicago",
-                    "Finish work for Bernina Norton from CHICAT"
+                    {
+                      text: "Clean the bike",
+                      rating: 5,
+                      reviewer: "Eric Cartman"
+                    },
+                    {
+                      text: "Fill up your W-9 form for Andrew Gruesser from KASS Management",
+                      rating: 4,
+                      reviewer: "Butters"
+                    },
+                    {
+                      text: "Touch base with Joel Estrada from Razorfish",
+                      rating: 3,
+                      reviewer: "Kenny"
+                    },
+                    {
+                      text: "Call Melissa Lederer from MATTER Chicago",
+                      rating: 2,
+                      reviewer: "Douglas Adams"
+                    },
+                    {
+                      text: "Finish work for Bernina Norton from CHICAT",
+                      rating: 1,
+                      reviewer: "Lorde Ya-Ya-Ya"
+                    }
                     ];
 
-    $scope.addTodo = function(newText) {
-      if (newText) {
+    $scope.addTodo = function(newText, newRating, newReviewer) {
+      if (newText && newRating && newReviewer) {
+        var todo = {
+                    text: newText, 
+                    rating: newRating, 
+                    reviewer: newReviewer
+                    }
+
         $scope.todos.push(newText);
         $scope.newTodo = '';
       }

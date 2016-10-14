@@ -11,11 +11,18 @@
     {{ message }} -->
     <div ng-repeat="todo in todos track by $index" 
         ng-click="deleteTodo($index)"
-        ng-if="isPositive(todo)">{{ todo }}</div>
+        ng-if="isPositive(todo.text)">
+
+    <h3>{{ todo.text }}</h3>
+    <h3>By {{ todo.reviewer }} - {{ todo.rating }} stars</h3>
+    <br>
+    </div>
 
     <div class="form">
-      <input type="text" ng-model="newTodo">
-      <button ng-click="addTodo(newTodo)">Add To-Do Task </button>
+      <input type="text" ng-model="newTodoText">
+      <input type="text" ng-model="newTodoRating">
+      <input type="text" ng-model="newTodoReviewer">
+      <button ng-click="addTodo(newTodoText, newTodoRating, newTodoReviewer)">Add To-Do Task </button>
     </div>
   </div>
 </div>
