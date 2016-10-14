@@ -21,8 +21,9 @@
       // $scope.newTodo = null;
     };
 
-    $scope.deleteReview = function(selectedReview) {
-      $scope.reviews.splice();
+    $scope.deleteTodo = function(selectedIndex) {
+      // var index = $scope.reviews.indexOf(selectedReview);
+      $scope.todos.splice(selectedIndex, 1);
     };
 
     // $scope.clearSearch = function(newText) {

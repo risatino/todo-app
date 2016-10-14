@@ -9,7 +9,7 @@
   </div>
   <div ng-controller="appThree">
     {{ message }} -->
-    <div ng-repeat="todo in todos track by $index" ng-click="deleteReview(review)">{{ todo }}</div>
+    <div ng-repeat="todo in todos track by $index" ng-click="deleteTodo($index)">{{ todo }}</div>
 
     <div class="form">
       <input type="text" ng-model="newTodo">
