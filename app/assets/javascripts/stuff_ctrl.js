@@ -26,16 +26,23 @@
                       completed: false
                     } 
                     ];
+    $scope.toggleCompleted = function(todo) {
+      if (todo.completed) {
+        todo.completed = true;
+      } else {
+        todo.completed = true;
+      }
+    };
 
-    $scope.addTodo = function(newText, newStatus) {
-      if (newText && newStatus) {
+    $scope.addTodo = function(newText) {
+      if (newText) {
         var todo = {
                     text: newText, 
-                    completed: newStatus, 
+                    completed: false, 
                     }
 
-        $scope.todos.push(newText);
-        $scope.newTodo = '';
+        $scope.todos.push(newTodo);
+        $scope.formText = null;
       }
 
       // $scope.newTodo = null;
