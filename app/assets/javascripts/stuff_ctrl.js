@@ -7,37 +7,31 @@
     $scope.todos = [
                     {
                       text: "Clean the bike",
-                      rating: 5,
-                      reviewer: "Eric Cartman"
+                      completed: false
                     },
                     {
                       text: "Fill up your W-9 form for Andrew Gruesser from KASS Management",
-                      rating: 4,
-                      reviewer: "Butters"
+                      completed: false
                     },
                     {
                       text: "Touch base with Joel Estrada from Razorfish",
-                      rating: 3,
-                      reviewer: "Kenny"
+                      completed: false
                     },
                     {
                       text: "Call Melissa Lederer from MATTER Chicago",
-                      rating: 2,
-                      reviewer: "Douglas Adams"
+                      completed: false
                     },
                     {
                       text: "Finish work for Bernina Norton from CHICAT",
-                      rating: 1,
-                      reviewer: "Lorde Ya-Ya-Ya"
-                    }
+                      completed: false
+                    } 
                     ];
 
-    $scope.addTodo = function(newText, newRating, newReviewer) {
-      if (newText && newRating && newReviewer) {
+    $scope.addTodo = function(newText, newStatus) {
+      if (newText && newStatus) {
         var todo = {
                     text: newText, 
-                    rating: newRating, 
-                    reviewer: newReviewer
+                    completed: newStatus, 
                     }
 
         $scope.todos.push(newText);

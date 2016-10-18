@@ -14,15 +14,13 @@
         ng-if="isPositive(todo.text)">
 
     <h3>{{ todo.text }}</h3>
-    <h3>By {{ todo.reviewer }} - {{ todo.rating }} stars</h3>
+    <h3>By {{ todo.completed }} </h3>
     <br>
     </div>
 
     <div class="form">
       <input type="text" ng-model="newTodoText">
-      <input type="text" ng-model="newTodoRating">
-      <input type="text" ng-model="newTodoReviewer">
-      <button ng-click="addTodo(newTodoText, newTodoRating, newTodoReviewer)">Add To-Do Task </button>
+      <button ng-click="addTodo(newTodoText)">Add To-Do Task </button>
     </div>
   </div>
 </div>
