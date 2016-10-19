@@ -10,7 +10,7 @@
                       completed: false
                     },
                     {
-                      text: "Fill up your W-9 form for Andrew Gruesser from KASS Management",
+                      text: "Fill out your W-9 form for Andrew Gruesser from KASS Management",
                       completed: false
                     },
                     {
