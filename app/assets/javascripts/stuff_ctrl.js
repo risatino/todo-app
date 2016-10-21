@@ -6,26 +6,27 @@
     // $scope.messages = ["First Message!", "Seconds!", "Third slice of pie!"];
     $scope.todos = [
                     {
-                      text: "Clean the bike",
-                      completed: false
+                    text: "Clean the bike",
+                    completed: false
                     },
                     {
-                      text: "Fill out your W-9 form for Andrew Gruesser from KASS Management",
-                      completed: false
+                    text: "Fill out your W-9 form for Andrew Gruesser from KASS Management",
+                    completed: false
                     },
                     {
-                      text: "Touch base with Joel Estrada from Razorfish",
-                      completed: false
+                    text: "Touch base with Joel Estrada from Razorfish",
+                    completed: false
                     },
                     {
-                      text: "Call Melissa Lederer from MATTER Chicago",
-                      completed: false
+                    text: "Call Melissa Lederer from MATTER Chicago",
+                    completed: false
                     },
                     {
-                      text: "Finish work for Bernina Norton from CHICAT",
-                      completed: false
+                    text: "Finish work for Bernina Norton from CHICAT",
+                    completed: false
                     } 
                     ];
+                    
     $scope.toggleCompleted = function(todo) {
       if (todo.completed) {
         todo.completed = true;
@@ -51,6 +52,10 @@
     $scope.deleteTodo = function(selectedIndex) {
       // var index = $scope.reviews.indexOf(selectedReview);
       $scope.todos.splice(selectedIndex, 1);
+    };
+
+    $scope.completeTask = function(index) {
+      $scope.todos[index].completed = !$scope.todos[index].completed;
     };
 
     // $scope.clearSearch = function(newText) {

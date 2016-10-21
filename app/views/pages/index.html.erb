@@ -10,11 +10,11 @@
   <div ng-controller="appThree">
     {{ message }} -->
     <div ng-repeat="todo in todos track by $index" 
-        ng-click="deleteTodo($index)"
-        ng-if="isPositive(todo.text)">
+        ng-click="completeTask($index)"
+        div ng-class="{strike: todo.text}">
+
 
     <h3>{{ todo.text }}</h3>
-    <h3>By {{ todo.completed }} </h3>
     <br>
     </div>
 
